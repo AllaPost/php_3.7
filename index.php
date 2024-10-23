@@ -1,5 +1,5 @@
 <?php
-// Изначально созданный массив с фиктивными отзывами
+// Массив с фиктивными отзывами
 $reviews = [
     ['name' => 'Иван', 'review' => 'Отличный товар!', 'rating' => 5],
     ['name' => 'Мария', 'review' => 'Быстрая доставка, качественный продукт.', 'rating' => 4],
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <h1>Оставить отзыв</h1>
 
-    <!-- Форма для добавления отзыва -->
+    <!-- Форма для отзыва -->
     <form method="post" action="">
         <label for="name">Ваше имя:</label><br>
         <input type="text" id="name" name="name" required><br><br>
@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <h2>Отзывы покупателей</h2>
 
-    <!-- Вывод всех отзывов -->
+    <!-- Вывод отзывов -->
     <?php if (!empty($reviews)): ?>
         <ul>
             <?php foreach ($reviews as $r): ?>
